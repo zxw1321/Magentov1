@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>    
+    <modules>
+        <Company_Sample>
+            <version>0.1.0</version>
+        </Company_Sample>
+    </modules>
+	<frontend>
+          <routers>
+              <sample>
+                  <use>standard</use>
+                  <args>
+                      <module>Company_Sample</module>
+                      <frontName>sample</frontName>
+                  </args>
+              </sample>
+          </routers>
+      </frontend>
+</config>

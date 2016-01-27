@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Packt_Socialwidget>
+			<active>true</active>
+			<cordPool>local</cordPool>
+		</Packt_Socialwidget>
+		<depends>
+			<Mage_Cms />
+		</depends>
+	</modules>
+</config>

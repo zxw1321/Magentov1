@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+	<socialwidget_list type="socialwidget/list"	translate="name description" module="socialwidget">
+		<name>Packt Share this</name>
+		<description>Adds a list of share links</description>
+		<parameters>
+			<enabled_services>
+				<label>Enabled Services</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>multiselect</type>
+				<source_model>socialwidget/services</source_model>
+			</enabled_services>
+			<template translate="label">
+				<label>Frontend Template</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>select</type>
+				<values>
+					<text translate="label">
+						<value>socialwidget/text.phtml</value>
+						<label>Text Links</label>
+					</text>
+					<icons translate="label">
+						<value>socialwidget/icons.phtml</value>
+						<label>Icon Links</label>
+					</icons>
+				</values>
+			</template>
+		</parameters>
+	</socialwidget_list>
+</widgets>

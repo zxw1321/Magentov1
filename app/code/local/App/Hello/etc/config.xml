@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<App_Hello>
+			<version>0.1.0</version>
+		</App_Hello>
+	</modules>
+	<frontend>
+		<routers>
+			<hello>
+				<use>standard</use>
+				<args>
+					<module>App_Hello</module>
+					<frontName>hello</frontName>
+				</args>
+			</hello>
+		</routers>
+		<layout>
+			<updates>
+				<hello>
+					<file>hello.xml</file>
+				</hello>
+			</updates>
+		</layout>
+	</frontend>
+	<global>
+		<helpers>
+			<hello>
+				<class>App_Hello_Helper</class>
+			</hello>
+		</helpers>
+		<blocks>
+			<hello>
+				<class>App_Hello_Block</class>
+			</hello>
+		</blocks>
+		<models>
+			<hello>
+				<class>App_Hello_Model</class>
+				<resourceModel>hello_mysql4</resourceModel>
+			</hello>
+			<!-- <hello_mysql4> <class>App_Hello_Model_Resource_Mysql4</class> <entities> 
+				<blogpost> <table>blog_posts</table> </blogpost> </entities> </hello_mysql4> -->
+			<hello_mysql4>
+				<class>App_Hello_Model_Mysql4</class>
+				<entities>
+					<hello>
+						<table>hello</table>
+					</hello>
+				</entities>
+			</hello_mysql4>
+			<!-- <hello_eav> <class>App_Hello_Model</class> <resourceModel>hello-eav_mysql4</resourceModel> 
+				</hello_eav> <hello-eav_mysql4> <class>App_Hello_Model_Resource_Eav_Mysql4</class> 
+				<entities> <blogpost> <table>eavblog_posts</table> </blogpost> </entities> 
+				</hello-eav_mysql4> -->
+		</models>
+		<resources>
+		<!--  
+			<hello_setup>
+				<setup>
+					<module>App_hello</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</hello_setup>
+			-->
+			<hello_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</hello_write>
+			<hello_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</hello_read>
+			<!-- <hello_setup> <setup> <module>App_Hello</module> <class>App_Hello_Model_Setup_Mysql4_Setup</class> 
+				</setup> <connection> <use>core_setup</use> </connection> </hello_setup> -->
+			<!-- <hello-eav_write> <connection> <use>default_write</use> </connection> 
+				</hello-eav_write> <hello-eav_read> <connection> <use>default_read</use> 
+				</connection> </hello-eav_read> -->
+			<!-- <hello-eav_setup> <setup> <module>App_Hello</module> <class>App_Hello_Model_Entity_Setup</class> 
+				</setup> <connection> <use>core_setup</use> </connection> </hello-eav_setup> -->
+		</resources>
+	</global>
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<hello_options>
+											<title>Store Hello Module Section</title>
+										</hello_options>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+</config>

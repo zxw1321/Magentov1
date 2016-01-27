@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Packt_Socialwidget>
+			<version>0.1.0</version>
+		</Packt_Socialwidget>
+	</modules>
+	<global>
+		<helpers>
+			<socialwidget>
+				<class>Packt_Socialwidget_Helper</class>
+			</socialwidget>
+		</helpers>
+		<blocks>
+			<socialwidget>
+				<class>Packt_Socialwidget_Block</class>
+			</socialwidget>
+		</blocks>
+		<models>
+			<socialwidget>
+				<class>Packt_Socialwidget_Model</class>
+			</socialwidget>
+		</models>
+	</global>
+</config>

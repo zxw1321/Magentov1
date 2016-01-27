@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Packt_Myshipping>
+			<version>1.0.0</version>
+			<depends>
+				<Mage_Shipping />
+			</depends>
+		</Packt_Myshipping>
+	</modules>
+	<global>
+		<models>
+			<myshipping>
+				<class>Packt_Myshipping_Model</class>
+			</myshipping>
+		</models>
+		<resources>
+			<myshipping_setup>
+				<setup>
+					<module>Packt_Myshipping</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</myshipping_setup>
+		</resources>
+	</global>
+	<default>
+		<carriers>
+			<myshipping>
+				<active>1</active>
+				<model>myshipping/carrier</model>
+			</myshipping>
+		</carriers>
+	</default>
+</config>
