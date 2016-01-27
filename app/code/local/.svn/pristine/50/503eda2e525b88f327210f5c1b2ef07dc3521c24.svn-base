@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>    
+    <modules>
+        <App_Hello>
+            <version>0.2.0</version>
+        </App_Hello>
+    </modules>
+	<frontend>
+          <routers>
+              <hello>
+                  <use>standard</use>
+                  <args>
+                      <module>App_Hello</module>
+                      <frontName>hello</frontName>
+                  </args>
+              </hello>
+          </routers>
+      </frontend>
+</config>

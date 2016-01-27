@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<modules>
+<App_Shopping>
+<version>0.1.0</version>
+</App_Shopping>
+</modules>
+<global>
+<!-- This rewrite rule could be added to the database instead -->
+<rewrite>
+<!-- This is an identifier for your rewrite that should be unique -->
+<!-- THIS IS THE CLASSNAME IN YOUR OWN CONTROLLER -->
+<App_Shopping_cart>
+<from><![CDATA[#^/checkout/cart/#]]></from>
+<!--
+- Shopping module matches the router frontname below - checkout_cart
+matches the path to your controller Considering the router below,
+"/shopping/cart/" will be "translated" to
+"/App/Shopping/controllers/CartController.php" (?)
+-->
+<to>/shopping/cart/</to>
+</App_Shopping_cart>
+</rewrite>
+</global>
+<!--
+If you want to overload an admin-controller this tag should be <admin>
+instead, or <adminhtml> if youre overloading such stuff (?)
+-->
+<frontend>
+<routers>
+<App_Shopping>
+<!-- should be set to "admin" when overloading admin stuff (?) -->
+<use>standard</use>
+<args>
+<module>App_Shopping</module>
+<!-- This is used when "catching" the rewrite above -->
+<frontName>shopping</frontName>
+</args>
+</App_Shopping>
+</routers>
+</frontend>
+</config>
