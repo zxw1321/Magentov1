@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="0.1.0">
-	<default>
-		<reference name="top.links">
-			<action method="addLink" translate="label title" module="news">
-				<label>My News</label>
-				<url helper="news/getNewsUrl" />
-				<title>My News</title>
-				<prepare />
-				<urlParams />
-				<position>201</position>
-			</action>
-		</reference>
-	</default>
+<!-- 	<default> -->
+<!-- 		<reference name="top.links"> -->
+<!-- 			<action method="addLink" translate="label title" module="news"> -->
+<!-- 				<label>My News</label> -->
+<!-- 				<url helper="news/getNewsUrl" /> -->
+<!-- 				<title>My News</title> -->
+<!-- 				<prepare /> -->
+<!-- 				<urlParams /> -->
+<!-- 				<position>201</position> -->
+<!-- 			</action> -->
+<!-- 		</reference> -->
+<!-- 	</default> -->
 	<news_index_index>
 		<reference name="head">
 			<action method="setMyTitle" translate="title">
